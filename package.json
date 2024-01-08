@@ -1,8 +1,14 @@
 {
   "name": "daas",
-  "displayName": "daas_vscode",
-  "description": "DaaS for VSCode",
-  "version": "0.0.1",
+  "displayName": "DaaS for VSCode",
+  "description": "The VSCode integration for DaaS, a software engineer's guide to company jargon.",
+  "version": "1.0.0",
+  "publisher": "Battagel",
+  "icon": "public/daas128.png",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/battagel/daas_vscode"
+  },
   "engines": {
     "vscode": "^1.84.0"
   },
@@ -10,20 +16,14 @@
     "Other"
   ],
   "activationEvents": [
-    "onLanguage:plaintext",
-    "onLanguage:javascript",
-    "onLanguage:typescript",
-    "onLanguage:python",
-    "onLanguage:c",
-    "onLanguage:c++",
-    "onLanguage:c#"
+    "onLanguage"
   ],
   "main": "./dist/extension.js",
   "contributes": {
     "commands": [
       {
-        "command": "daas.helloWorld",
-        "title": "Hello World"
+        "command": "daas.help",
+        "title": "Help page for Daas"
       }
     ]
   },
