@@ -5,7 +5,7 @@ export function activate(context: vscode.ExtensionContext) {
 	const api_url = "http://127.0.0.1:8080";
 	const api = new API(api_url);
 
-    let disposable = vscode.languages.registerHoverProvider('plaintext', {
+    let disposable = vscode.languages.registerHoverProvider(['plaintext', 'c', 'typescript', 'javascript'], {
         async provideHover(document, position, token) {
             const wordRange = document.getWordRangeAtPosition(position);
             const word = wordRange ? document.getText(wordRange) : '';
